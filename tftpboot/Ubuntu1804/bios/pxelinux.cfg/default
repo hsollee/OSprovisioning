@@ -1,0 +1,14 @@
+
+# D-I config version 2.0
+# search path for the c32 support libraries (libcom32, libutil etc.)
+DEBCONF_DEBUG=developer
+default vesamenu.c32
+prompt 1
+timeout 5
+
+menu title ##PXE BOOT MENU##
+label 1
+        menu label install linux ubuntu server
+        #menu default
+        KERNEL linux
+        APPEND auto=true priority=critical interface=eno1 initrd=initrd.gz url=http://10.254.192.60/Ubuntu1804/bios/preseed_bios.cfg -- quiet

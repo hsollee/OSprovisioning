@@ -1,0 +1,12 @@
+
+
+DEFAULT menu.c32
+timeout 100
+
+menu title ### OS Installer Boot Menu ###
+
+LABEL CentOS7
+       menu label CentOS7
+       kernel CentOS7/vmlinuz
+append ksdevice=eth0 initrd=CentOS7/initrd.img network ks=http://10.254.192.60/ks.cfg
+
